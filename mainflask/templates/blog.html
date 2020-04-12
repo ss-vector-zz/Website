@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+	{% block content %}
+	<section id="blog-wrap" class="bg-lightgrey">
+		<div class="container p-5 smg-5">
+			<div class="row">
+				<div class="col-md-8">
+					{% with messages = get_flashed_messages(with_categories=true) %}
+						{% if messages %}
+							{% for category, message in messages %}
+								<div class="alert alert-{{ category }}">
+									{{ message }}
+								</div>	
+							{% endfor %}
+						{% endif %}
+					{% endwith %}
+
+					{% include 'blog-content.html' %}
+
+				</div>
+				<div class="col-md-4 pt-5">
+					<div class="sidebar content-section">
+						<h5>Sidebar</h5>
+						<ul>
+							{% if current_user.is_authenticated  %}
+								<li><a href="{{ url_for('logout')}}">Logout</a></li>
+								<li><a href="{{ url_for('account')}}">Cuenta</a></li>
+							{% else %}
+								<li><a href="{{ url_for('register')}}">Registrate</a></li>
+								<li><a href="{{ url_for('login')}}">Inicia Sesión</a></li>
+							{% endif%}
+						</ul>
+						<p class="text-muted">Esta sección aun esta en desarrollo, se añadirá muy pronto.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	{% endblock %}

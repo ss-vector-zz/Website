@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+	{% block content %}
+	<div id="home-wrapper">
+		<!-- Main Featured Presentation -->
+		<section id="main-featured" class="pt-5">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 p-2 text-center">
+							<h1>Hola!</h1>
+						</div>
+						<div class="col-xl-12 text-center p-5">
+							<p>Actualmente estamos trabajando para poder mostrarte los productos y servicios que ofrecemos en nuestra tienda local. Somos una tienda especializada en la venta de luminarias y material eléctrico para el sector doméstico.</p>
+						</div>
+					</div>
+				</div>
+		</section>
+		<!-- Proyectos -->
+		<section id="proyects">
+			<div class="container">
+				<div class="row p-5">
+					<div class="col-sm-12 text-white text-center">
+						<h1>Proyectos</h1>
+						<span>Pequeños proyectos que aporten a nuestra comunidad dentro del área local.</span>
+					</div>
+					<div class="col-xl-12 pt-4">
+						<section class="card-container">
+							<div class="card">
+								<div class="face face1">
+									<div class="content">
+										<h2>Ferretería</h2>
+										<p>Unidad comercial de para distribución de luminarias y accesorios eléctricos para el hogar.</p>
+										<a href="#" class="lattest-news-btn">Catalogo</a>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="face face1">
+									<div class="content">
+										<h2>Viveros</h2>
+										<p>Venta de semillas y plantas. Proyectos Ecologicos y apoyo al medio ambiente.</p>
+										<a href="#" class="lattest-news-btn">Lista</a>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="face face1">
+									<div class="content">
+										<h2>Reciclaje</h2>
+										<p>Diversas iniciativas, propuestas y experimentos para reducir el impacto ambiental.</p>
+										<a href="#" class="lattest-news-btn">Conoce</a>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Services -->
+		<section id="services">
+			<div class="container">
+				<div class="row p-5">
+					<div class="col-sm-12 text-center">
+						<h1>Servicios en Tienda</h1>
+					</div>
+					<div class="col-xl-12 pt-4">
+						<section class="p-5">
+							<span>Contamos con servicios bancarios(*) en tienda, como: Banco de la Nación(Multired), Agente Interbank, Agente BBVA, Agente Caja Piura.</span>
+						</section>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Lattest news -->
+		<section id="lattest-news">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-12 pt-4">
+						<section class="p-5 text-white">
+							<h1>Ultimas Noticias</h1>
+							<p>Se esta preparando una sección Blog donde se presentarán artículos sobre las tendencias locales de relevancia en el sector.</p>
+							<a href="{{ url_for('blog') }}" class="lattest-news-btn">Ver Blog</a>
+						</section>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Contact us -->
+		<section id="find-us">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-12 pt-4">
+						<section class="p-5">
+							<div class="container">
+								<div class="row">
+									<div class="col-sm-12">
+										<h1>Ubicanos</h1>
+										<div id="map">
+											<!-- -6.7054831,-79.9021153,19.75-->
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	{% endblock %}
+
+
